@@ -1,6 +1,10 @@
 .filter {
-  position: relative;
+  padding-top: 78px;
   max-width: 340px;
+
+  &__form {
+    position: relative;
+  }
 
   &__title {
     margin-bottom: 30px;
@@ -30,12 +34,17 @@
 
     &_column {
       flex-direction: column;
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
   &__input {
-    padding: 9px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid $color-primary;
     width: 165px;
+    height: 38px;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -57,7 +66,9 @@
   }
 
   &__apply {
+    margin: 0 auto;
     padding: 8px 20px;
+    display: block;
     background-color: $color-primary;
     font-weight: 500;
     font-size: 16px;

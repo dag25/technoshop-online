@@ -42,7 +42,9 @@
 
     <section class="card">
       <div class="container  card__container">
+
         <div class="card__details">
+
           <div class="card__gallery">
 
             <div class="swiper  card__image">
@@ -88,6 +90,7 @@
               <div class="swiper-scrollbar"></div>
             </div>
           </div>
+
           <div class="card__info">
 
             <h2 class="card__title">
@@ -101,7 +104,7 @@
             <div class="card__control">
               <div class="card__count">
                 <button class="card__btn  card__btn_dec" aria-label="Уменьшить количество товаров">–</button>
-                <output class="card__number"></output>
+                <output class="card__number">1</output>
                 <button class="card__btn  card__btn_inc" aria-label="Увеличить количество товаров">+</button>
               </div>
 
@@ -113,9 +116,7 @@
                 В корзину
               </button>
             </div>
-
-          </div>
-          <ul class="card__params-list">
+            <ul class="card__params-list">
             <li class="card__params-item">
               <span>Производитель:</span>
               <span>Garmin</span>
@@ -168,7 +169,10 @@
               <span>Вес:</span>
               <span>46.3 г</span>
             </li>
-          </ul>
+            </ul>
+
+          </div>
+
         </div>
 
         <div class="card__description">
@@ -187,6 +191,7 @@
             </p>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -196,7 +201,7 @@
           Возможно вам также понравится
         </h2>
         <div class="swiper  recommended__carousel">
-          <ul class="swiper-wrapper">
+          <ul class="swiper-wrapper  recommended__swiper">
             <li class="swiper-slide">
                 <article class="goods-item">
                   <a href="card.html">
@@ -417,8 +422,8 @@
 
           <div class="swiper-pagination"></div>
 
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev  recommended__btn  recommended__btn_prev"></div>
+          <div class="swiper-button-next  recommended__btn  recommended__btn_next"></div>
 
         </div>
       </div>
