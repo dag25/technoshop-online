@@ -1,0 +1,90 @@
+.filter {
+  position: relative;
+  max-width: 340px;
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &__field {
+    margin-bottom: 30px;
+
+    &-list {
+      margin-bottom: 40px;
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    gap: 10px;
+
+    &_column {
+      flex-direction: column;
+    }
+  }
+
+  &__input {
+    padding: 9px 10px;
+    width: 165px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    &_select {
+      width: 100%;
+      color: $color-grey;
+    }
+
+    &::placeholder {
+      color: $color-grey;
+    }
+  }
+
+
+
+  &__checkbox {
+    margin-right: 10px;
+  }
+
+  &__apply {
+    padding: 8px 20px;
+    background-color: $color-primary;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-secondary;
+    transition: background-color .36s ease-in-out;
+
+    &:hover {
+      background-color: $color-main;
+    }
+
+    &:active {
+      background-color: $color-main-sub;
+    }
+
+    &:focus{
+      background-color: $color-grey-light;
+    }
+  }
+
+  &__reset {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-grey;
+  }
+}
