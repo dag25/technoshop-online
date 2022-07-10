@@ -40,13 +40,15 @@
   </header>
   <main class="main">
     <section class="cart">
+
       <h2 class="visually-hidden">
-        Корзина
+        Оформление заказа
       </h2>
+
       <div class="container  cart__container">
 
         <section class="cart__goods">
-          <h3 class="cart__goods-title">
+          <h3 class="cart__title  cart__goods-title">
             Корзина
           </h3>
           <ul class="cart__goods-list">
@@ -64,7 +66,7 @@
               <div class="item__control">
                 <div class="item__count">
                   <button class="item__btn  item__btn_dec" aria-label="Уменьшить количество товаров в корзине">–</button>
-                  <output class="item__number"></output>
+                  <output class="item__number">1</output>
                   <button class="item__btn  item__btn_inc" aria-label="Увеличить количество товаров в корзине">+</button>
                 </div>
                 <p class="item__price">20799 ₽</p>
@@ -90,7 +92,7 @@
               <div class="item__control">
                 <div class="item__count">
                   <button class="item__btn  item__btn_dec" aria-label="Уменьшить количество товаров в корзине">–</button>
-                  <output class="item__number"></output>
+                  <output class="item__number">1</output>
                   <button class="item__btn  item__btn_inc" aria-label="Увеличить количество товаров в корзине">+</button>
                 </div>
                 <p class="item__price">12479 ₽</p>
@@ -116,7 +118,7 @@
               <div class="item__control">
                 <div class="item__count">
                   <button class="item__btn  item__btn_dec" aria-label="Уменьшить количество товаров в корзине">–</button>
-                  <output class="item__number"></output>
+                  <output class="item__number">1</output>
                   <button class="item__btn  item__btn_inc" aria-label="Увеличить количество товаров в корзине">+</button>
                 </div>
                 <p class="item__price">7944 ₽</p>
@@ -131,13 +133,64 @@
           </ul>
         </section>
 
+        <section class="cart__total  total">
+          <h3 class="visually-hidden">
+            Итог
+          </h3>
+
+          <div class="total__wrapper">
+
+            <ul class="total__table">
+              <li class="total__row  total__row_header">
+                <span>Итого</span>
+                <span>41 222 ₽</span>
+              </li>
+              <li class="total__row  total__row_grey">
+                <span>Товары, 3 шт.</span>
+                <span>41 222 ₽</span>
+              </li>
+              <li class="total__row  total__row_grey">
+                <span>Скидка</span>
+                <span>0 ₽</span>
+              </li>
+              <li class="total__row  total__row_grey  total__row_gap">
+                <span>Доставка</span>
+                <span>0 ₽</span>
+              </li>
+              <li class="total__row">
+                <span>Дата</span>
+                <span>01 - 03 июля</span>
+              </li>
+              <li class="total__row">
+                <span>Оплата</span>
+                <span>Картой</span>
+              </li>
+            </ul>
+
+            <div class="total__order">
+              <button class="total__submit" type="submit">
+                Оформить заказ
+              </button>
+
+              <label class="total__agree">
+                <input type="checkbox" name="agree" required>
+                <span>
+                  Согласен&nbsp;с <a class="total__agree-link" href="#" aria-label="Перейти на условия правил использования">условиями</a> правил пользования торговой площадкой и&nbsp;правилами возврата
+                </span>
+              </label>
+            </div>
+
+          </div>
+
+        </section>
+
         <section class="cart__address  address">
           <h3 class="cart__title  address__title">
             Адрес доставки
           </h3>
 
           <form class="address__form">
-            <label>
+            <label class="address__label">
               <select class="address__item  address__item_select" name="city" >
                 <option value="" disabled selected>Город</option>
                 <option value="Moscow">Москва</option>
@@ -149,16 +202,16 @@
               </select>
             </label>
 
-            <label>
+            <label class="address__label">
               <input class="address__item" type="text" placeholder="Улица, дом">
             </label>
-            <label>
+            <label class="address__label">
               <input class="address__item" type="text" placeholder="Квартира">
             </label>
-            <label>
+            <label class="address__label">
               <input class="address__item" type="text" placeholder="ФИО">
             </label>
-            <label>
+            <label class="address__label">
               <input class="address__item" type="text" placeholder="Индекс">
             </label>
 
@@ -166,57 +219,11 @@
               Сохранить
             </button>
 
-            <label class="address__label-save">
-              <input type="checkbox" name="save-address">Запомнить этот адрес
+            <label class="address__label  address__label-save">
+              <input class="address__item_checkbox" type="checkbox" name="save-address">
+              <span>Запомнить этот адрес</span>
             </label>
           </form>
-
-        </section>
-
-        <section class="cart__total  total">
-          <h3 class="visually-hidden">
-            Итог
-          </h3>
-
-          <ul class="total__table">
-            <li class="total__row  total__row_header">
-              <span>Итого</span>
-              <span>41 222 ₽</span>
-            </li>
-            <li class="total__row  total__row_grey">
-              <span>Товары, 3 шт.</span>
-              <span>41 222 ₽</span>
-            </li>
-            <li class="total__row  total__row_grey">
-              <span>Скидка</span>
-              <span>0 ₽</span>
-            </li>
-            <li class="total__row  total__row_grey">
-              <span>Доставка</span>
-              <span>0 ₽</span>
-            </li>
-            <li class="total__row">
-              <span>Дата</span>
-              <span>01 - 03 июля</span>
-            </li>
-            <li class="total__row">
-              <span>Оплата</span>
-              <span>Картой</span>
-            </li>
-          </ul>
-
-          <div class="total__order">
-            <button class="total__submit" type="submit">
-              Оформить заказ
-            </button>
-
-            <label class="total__agree">
-              <input type="checkbox" name="agree">
-              <span>
-                Согласен&nbsp;с <a class="total__agree-link" href="#" aria-label="Перейти на условия правил использования">условиями</a> правил пользования торговой площадкой и&nbsp;правилами возврата
-              </span>
-            </label>
-          </div>
 
         </section>
 

@@ -1,0 +1,72 @@
+
+.address {
+
+  // .address__title
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  // .address__form
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    grid-template-rows: repeat(3, 50px);
+    justify-content: space-between;
+    gap: 30px;
+    width: 1080px;
+  }
+
+  // .address__item
+
+  &__item {
+    background: $color-secondary;
+    border: 1px solid $color-primary;
+    padding: 10px 15px;
+    height: 100%;
+    width: 100%;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+
+   // .address__item_select
+
+    &_select {
+
+    }
+
+   // .address__item_btn
+
+    &_btn {
+      grid-column: 3/4;
+      background-color: $color-primary;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: $color-secondary;
+    }
+
+    &_checkbox {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  // .address__label-save
+
+  &__label-save {
+    grid-column: 3/4;
+    grid-row: 3;
+    display: flex;
+    align-items: flex-start;
+  }
+}

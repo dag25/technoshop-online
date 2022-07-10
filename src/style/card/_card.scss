@@ -96,6 +96,11 @@
     font-weight: 400;
     font-size: 30px;
     line-height: 100%;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      background-color: $color-main;
+    }
   }
 
   // .card__number

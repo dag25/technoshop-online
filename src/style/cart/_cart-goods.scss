@@ -1,0 +1,41 @@
+.cart {
+
+  // .cart__goods
+
+  &__goods {
+  }
+
+  // .cart__goods-title
+
+  &__goods-title {
+    margin-bottom: 40px;
+  }
+
+  // .cart__goods-list
+
+  &__goods-list {
+
+  }
+
+  // .cart__goods-item
+
+  &__goods-item {
+    margin-bottom: 30px;
+    max-width: 990px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+.card__thumb-btn_active {
+  outline: 2px solid $color-main;
+}
+
+
+.swiper-wrapper {
+  margin-bottom: 50px;
+}
