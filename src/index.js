@@ -27,6 +27,7 @@ const thumbSwiper = new Swiper('.card__slider-thumb', {
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		draggable: true,
+		// dragClass: 'card__thumb-scroll',
 	},
 	modules: [Scrollbar],
 });

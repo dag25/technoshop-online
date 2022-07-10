@@ -38,6 +38,17 @@
     display: block;
     width: 120px;
     height: 120px;
+
+    &_active {
+      outline: 2px solid $color-main;
+      outline-offset: -2px;
+    }
+  }
+
+  // .card__thumb-scroll
+
+  &__thumb-scroll {
+
   }
 
   // .card__info
@@ -183,4 +194,6 @@
     line-height: 140%;
   }
 }
-
+.swiper-wrapper {
+  margin-bottom: 10px;
+}
