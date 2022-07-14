@@ -7,6 +7,37 @@
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr;
     gap: 30px;
+    grid-template-areas:
+      "logo catalog customer contacts"
+      "copyright . . author";
+
+    @include laptop {
+      grid-template-columns: 395px 235px 280px;
+      grid-template-areas:
+      "logo . ."
+      "catalog customer contacts"
+      "copyright . author";
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "logo ."
+      "catalog customer"
+      "catalog contacts"
+      "copyright author";
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "logo"
+      "catalog"
+      "customer"
+      "contacts"
+      "copyright"
+      "author";
+    }
   }
 
   &__logo{
@@ -14,6 +45,7 @@
 
     &-link {
       place-self: start;
+      grid-area: logo;
     }
   }
 
@@ -23,6 +55,11 @@
       font-weight: 700;
       font-size: 32px;
       line-height: 130%;
+
+      @include mobile {
+        font-size: 20px;
+        line-height: 130%;
+      }
     }
   }
 
@@ -31,8 +68,17 @@
     font-size: 22px;
     line-height: 150%;
 
+    @include mobile {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
     &_double {
       column-count: 2;
+
+      @include tablet {
+        column-count: auto;
+      }
     }
 
     &_contacts {
@@ -61,16 +107,31 @@
       color: $color-main;
     }
   }
+
+  &__catalog {
+    grid-area: catalog;
+  }
+
+  &__customer {
+    grid-area: customer;
+  }
+
+  &__contacts {
+    grid-area: contacts;
+  }
+
 }
 
 .copyright {
+  grid-area: copyright;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
 }
 
 .author {
-  grid-column: -1 / -2;
+  grid-area: author;
+
   display: flex;
   flex-direction: column;
 

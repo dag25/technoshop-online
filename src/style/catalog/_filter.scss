@@ -2,6 +2,10 @@
   padding-top: 78px;
   max-width: 340px;
 
+  @include tablet {
+    display: none;
+  }
+
   &__form {
     position: relative;
   }
@@ -30,6 +34,7 @@
 
   &__flex {
     display: flex;
+    justify-content: space-between;
     gap: 10px;
 
     &_column {
@@ -48,6 +53,10 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+
+    @include laptop {
+      width: 145px;
+    }
 
     &_select {
       width: 100%;
