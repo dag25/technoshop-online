@@ -6,10 +6,17 @@ $color-main-dark:#197c00;
 $color-grey:#6f6f6f;
 $color-grey-light:#cdcdcd;
 
+$max-desktop: 1700px;
 $desktop: 1600px;
 $laptop: 1200px;
 $tablet: 1000px;
 $mobile: 560px;
+
+@mixin max-desktop {
+  @media (max-width: #{$max-desktop}) {
+    @content
+  }
+}
 
 @mixin desktop {
   @media (max-width: #{$desktop}) {

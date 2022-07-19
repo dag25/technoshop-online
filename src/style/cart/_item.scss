@@ -7,8 +7,11 @@
   &__img {
     margin-right: 30px;
     width: 200px;
-    height: 200px;
     object-fit: cover;
+
+    @include desktop {
+      width: 137px;
+    }
   }
 
   // .item__detail
@@ -19,6 +22,10 @@
     flex-direction: column;
     padding-top: 28px;
     margin-right: 25px;
+
+    @include desktop {
+      flex-basis: 320px;
+    }
   }
 
   // .item__title
@@ -29,6 +36,10 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 27px;
+
+    @include desktop {
+      min-height: auto;
+    }
   }
 
   // .item__vendor-code
@@ -44,9 +55,10 @@
   &__control {
     display: flex;
     align-items: center;
+    align-self: center;
     justify-content: space-between;
     flex-grow: 1;
-    align-self: center;
+    gap: 10px;
   }
 
   // .item__count
@@ -55,7 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 70px;
+    gap: 10px;
     max-width: 120px;
     width: 100%;
   }
@@ -91,11 +103,13 @@
     font-weight: 500;
     font-size: 22px;
     line-height: 27px;
+    white-space: nowrap;
   }
 
   // .item__remove-cart
 
   &__remove-cart {
+    min-width: 32px;
     width: 32px;
     height: 32px;
     color: $color-grey-light;
