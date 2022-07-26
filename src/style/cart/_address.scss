@@ -118,5 +118,13 @@
     font-size: 14px;
     line-height: 17px;
     color: $color-grey;
+
+    @include desktop {
+      grid-column: 2;
+    }
+
+    @include mobile {
+      grid-column: 1;
+    }
   }
 }
