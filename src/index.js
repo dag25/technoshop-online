@@ -7,6 +7,12 @@ import { getGoods } from './modules/goodsService';
 import { renderGoods } from './modules/renderGoods';
 import { getGoodsItem } from './modules/goodsService';
 import { renderItem } from './modules/renderItem';
+
+import Swiper, { Thumbs, Scrollbar, Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/scrollbar';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 // главная страница
 try {
 	const goodsList = document.querySelector('.goods__list');
@@ -63,15 +69,11 @@ try {
 } catch (error) {
 	console.warn(error);
 }
-import Swiper, { Thumbs, Scrollbar, Navigation, Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/scrollbar';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 new Swiper('.recommended__carousel', {
 	spaceBetween: 30,
 	slidesPerView: 5,
+	autoHeight: true,
 	pagination: {
 		el: '.swiper-pagination',
 	},
