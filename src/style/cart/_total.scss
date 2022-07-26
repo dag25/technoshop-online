@@ -1,5 +1,17 @@
 
 .total {
+
+  @include mobile {
+    position: relative;
+    left: -10px;
+    width: 320px;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: $color-grey;
+    border-radius: 0;
+    padding: 15px 10px 25px;
+  }
+
   // .total__wrapper
 
   &__wrapper {
@@ -7,12 +19,26 @@
     border: 1px solid $color-grey;
     border-radius: 20px;
     padding: 40px 20px;
+
+    @include laptop {
+      max-width: 494px;
+      margin: 0 auto;
+    }
+
+    @include mobile {
+      border-width: 0;
+      padding: 0;
+    }
   }
 
   // .total__table
 
   &__table {
     margin-bottom: 50px;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
   }
 
   // .total__row
@@ -29,6 +55,12 @@
 
     &:last-child {
       margin-bottom: 0;
+
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+      padding: 0;
     }
 
    // .total__row_header
@@ -36,10 +68,20 @@
     &_header {
       border-bottom: 1px solid $color-grey-light;
       padding-bottom: 9px;
+      padding-left: 10px;
+      padding-right: 10px;
       margin-bottom: 27px;
       font-weight: 700;
       font-size: 22px;
       line-height: 27px;
+
+      @include mobile {
+        position: relative;
+        left: -10px;
+        width: 320px;
+        padding-bottom: 4px;
+        margin-bottom: 14px;
+      }
     }
 
    // .total__row_grey
@@ -50,6 +92,10 @@
 
     &__gap {
       margin-bottom: 40px;
+
+      @include mobile {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -77,6 +123,11 @@
     font-size: 20px;
     line-height: 24px;
     color: $color-secondary;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 
   // .total__agree
@@ -94,7 +145,7 @@
   // .total__agree-link
 
   &__agree-link {
-    color: $color-primary;
+    color: $color-main;
   }
 }
 

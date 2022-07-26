@@ -13,6 +13,10 @@
 
   &__title {
     margin-bottom: 30px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   // .address__form
@@ -24,8 +28,19 @@
 
     @include desktop {
       grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @include tablet {
+      gap: 10px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
     }
   }
+
+  // .address__label-select
 
   &__label-select {
     position: relative;
@@ -35,7 +50,7 @@
       position: absolute;
       right: 43px;
       top: 50%;
-      transform: translate(calc(-50% - 2px) rotate(45deg));
+      transform: translateY(calc(-50% - 2px)) rotate(45deg);
       display: block;
       width: 10px;
       height: 10px;
@@ -57,6 +72,11 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 20px;
+    }
+
+    @include tablet {
+      font-style: 12px;
+      line-height: 15px;
     }
 
    // .address__item_select
@@ -90,7 +110,7 @@
   // .address__label-save
 
   &__label-save {
-    grid-column: -2;
+    grid-column: 3;
     display: flex;
     align-items: center;
     gap: 8px;

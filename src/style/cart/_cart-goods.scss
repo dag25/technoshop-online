@@ -9,6 +9,10 @@
 
   &__goods-title {
     margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   // .cart__goods-list

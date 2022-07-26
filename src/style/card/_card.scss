@@ -1,5 +1,7 @@
 .card {
+  position: relative;
   margin-bottom: 70px;
+  min-height: 80vh;
 
   // .card__container
 
@@ -192,6 +194,21 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 140%;
+  }
+
+  &__preload {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-secondary;
+
+    svg {
+      transform: rotate(0);
+      animation: rotation 1s infinite linear;
+    }
   }
 }
 .swiper-wrapper {
