@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Critical = require('critical-css-webpack-plugin');
 
 const PAGES = ['index', 'card', 'cart'];
 
@@ -36,6 +37,7 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css',
 		}),
+		new Critical(),
 	],
 	module: {
 		rules: [
@@ -56,6 +58,7 @@ module.exports = {
 							},
 						},
 					},
+					'group-css-media-queries-loader',
 					'sass-loader',
 				],
 			},

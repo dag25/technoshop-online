@@ -7,6 +7,7 @@ import { getGoods } from './modules/goodsService';
 import { renderGoods } from './modules/renderGoods';
 import { getGoodsItem } from './modules/goodsService';
 import { renderItem } from './modules/renderItem';
+import { filter } from './modules/filter';
 
 import Swiper, { Thumbs, Scrollbar, Navigation, Pagination } from 'swiper';
 import 'swiper/css';
@@ -18,8 +19,7 @@ try {
 	const goodsList = document.querySelector('.goods__list');
 	if (goodsList) {
 		const paginationWrapper = document.querySelector('.pagination');
-		const pageURL = new URL(location);
-		const page = +pageURL.searchParams.get('page') || 1;
+		filter(goodsList, paginationWrapper);
 
 		goodsList.innerHTML = `
     <div class="goods__preload">
@@ -30,7 +30,7 @@ try {
     </div>
     `;
 
-		getGoods({ page }).then(({ goods, pages, page }) => {
+		getGoods().then(({ goods, pages, page }) => {
 			renderGoods(goodsList, goods);
 			startPagination(paginationWrapper, pages, page);
 		});
